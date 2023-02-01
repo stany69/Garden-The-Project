@@ -1,0 +1,61 @@
+
+.coupon_wraapper{
+    width: 100%;
+    height: 500px;
+    background-color:#339933 ;
+    display: flex;
+}
+.coupon_left{
+    width: 50%;
+    height: 100%;
+}
+.gnome{
+    margin-top: 2em;
+}
+.coupon_right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.right_text-up , .right_text-down ,.submit{
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: 700;
+    
+    line-height: 130%;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+}
+.right_text-up{
+    font-size: 90px;
+    margin-top: .5em;
+}
+.right_text-down{
+    font-size: 50px;
+    margin-top: -0.5em;
+    margin-bottom: 1em
+}
+.number{
+    width: 65%;
+    height: 75.44px;
+    border-radius: 25.1468px;
+    border: 1px solid #ffffff;
+}
+.submit{
+    width: 65%;
+    height: 75.44px;
+    border-radius: 25.1468px;
+    border: 3px solid #ffffff;
+    background-color: #339933;
+    
+    margin-top: 1em;
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28.74px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
