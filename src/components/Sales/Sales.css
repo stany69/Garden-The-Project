@@ -39,10 +39,7 @@
     justify-content: space-around;
     align-items: center;
 }
-.product_title{
-    text-align: center;
-    margin-top: 1em;
-}
+
 .discount_price{
   font-family: 'Monserrat';
   font-style: normal;
@@ -73,6 +70,8 @@
   color: #FF32A1;
 }
 .product_title{
+    text-align: center;
+    margin-top: 1em;
     font-size: 16px;
     color: #3a3a3a;
 }

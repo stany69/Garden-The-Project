@@ -39,7 +39,7 @@ function threeProducts(products){
                   <div className='prices_sales'>
                     <p className='discount_price'>{elem.discont_price} €</p>
                     <p className='orig_prices'>{elem.price} €</p>
-                    <p className='percentage'>-7%</p>
+                    <p className='percentage'>{Math.round(((elem.price-elem.discont_price)/(elem.price))*100)} %</p>
                   </div>
                   <h4 className='product_title'>{elem.title}</h4>
              

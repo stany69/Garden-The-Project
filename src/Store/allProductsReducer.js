@@ -1,13 +1,15 @@
 
-
+const defaultState = {
+    products: []
+}
 
 const ALL_PRODUCTS = 'ALL_PRODUCTS'
 
-export const allProductsReducer = (state,action) =>{
+export const allProductsReducer = (state = defaultState,action) =>{
     switch(action.type){
 
         case ALL_PRODUCTS :
-            return {...state , empl: [...state.empl , ...action.payload]}
+            return {...state , products: [...state.products , ...action.payload]}
 
 
         default:

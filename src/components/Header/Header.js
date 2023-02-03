@@ -1,13 +1,20 @@
 import Logo from '../media/logo.png'
 import Basket from '../media/basket.png'
 import './Header.css';
+import { productsInStock } from '../../asyncAction/productsAsync';
+import { useDispatch ,useSelector} from 'react-redux';
+import { AllProductsAction } from '../../Store/allProductsReducer';
 
 function Header() {
+
+    let products =  useSelector(store => store.products.products)
+  let dispatch = useDispatch
+
   return (
     <div className="header_wrapper">
          <div className='left_side-header'>
             <a href='/'><img className='logo' alt='logo' src={Logo}></img></a>
-            <button className='cat_but' >Catalogue</button>
+            <button onClick={() => dispatch( AllProductsAction())} className='cat_but' >Catalogue</button>
         </div>
         
         <nav className='nav_menu'>     
