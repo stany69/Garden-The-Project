@@ -5,6 +5,7 @@ import { productsInStock } from '../../asyncAction/productsAsync';
 import { useDispatch ,useSelector} from 'react-redux';
 import { AllProductsAction } from '../../Store/allProductsReducer';
 
+
 function Header() {
 
     let products =  useSelector(store => store.products.products)
