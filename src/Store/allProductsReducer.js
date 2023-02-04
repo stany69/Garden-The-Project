@@ -9,7 +9,7 @@ export const allProductsReducer = (state = defaultState,action) =>{
     switch(action.type){
 
         case ALL_PRODUCTS :
-            return {...state , products: [...state.products , ...action.payload]}
+            return {...state , products: [ ...action.payload]}
 
 
         default:

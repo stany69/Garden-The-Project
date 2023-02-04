@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react'
 
 import {Link, useParams} from 'react-router-dom'
 import './Categories.css'
+import Header from '../Header/Header'
 
 function Categories() {
 
@@ -33,6 +34,7 @@ useEffect(() =>{
 
     return (
       <div className='categories_wrapper'>
+      
           <section className='categories_sec'>
             <div className='cat_text-div'>
               <h3 className='cat_text'>Categories</h3>

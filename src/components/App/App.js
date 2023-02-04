@@ -9,22 +9,27 @@ import NewSeasonSale from "../NewSeasonSale/NewSeasonSale";
 import Sales from "../Sales/Sales";
 import Categories from "../Categories/Categories";
 import Coupon from "../Coupon/Coupon";
-
+import { AllProductsAction } from "../../Store/allProductsReducer";
+import { allProductsReducer } from "../../Store/allProductsReducer";
+import {productsAsync} from "../../asyncAction/productsAsync"
+import { AllProducts } from "../AllProducts";
 function App() {
   return (
     <div>
-      <Header />
-      <NewSeasonSale />
-      <Categories />
-      <Router>
-      <Coupon/>
-      <Sales />
-      <Footer/>
-     
+           <Header />
+           <NewSeasonSale />
+           <Categories />
+           <Coupon/>
+           <Sales />
+           <Footer/>
+           <AllProducts/>
+      <div/>
         <Routes>
           
+          
         </Routes>
-      </Router>
+        
+     
      
       
     </div>
