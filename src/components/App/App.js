@@ -12,24 +12,39 @@ import Coupon from "../Coupon/Coupon";
 import { AllProductsAction } from "../../Store/allProductsReducer";
 import { allProductsReducer } from "../../Store/allProductsReducer";
 import {productsAsync} from "../../asyncAction/productsAsync"
-import { AllProducts } from "../AllProducts";
+import { AllProducts, Catalog } from "../Catalog";
+import {GetOneProduct} from "../GetOneProduct"
+import { Basket } from "../Basket/Basket";
+
+
+
+
 function App() {
   return (
     <div>
+      
+           
            <Header />
            <NewSeasonSale />
            <Categories />
            <Coupon/>
            <Sales />
            <Footer/>
-           <AllProducts/>
-      <div/>
+           
         <Routes>
-          
-          
-        </Routes>
-        
+           <Route path="/categories" element = {<Categories/>}/>
+           <Route path="/coupon" element = {<Coupon/>}/>
+           <Route path="/sales" element = {<Sales/>}/>
+           <Route path="/contacts" element = {<Footer/>}/>
+           <Route path="/basket" element = {<Basket/>}/>
+           
+       </Routes>
+           
+           
+         
      
+        
+       
      
       
     </div>

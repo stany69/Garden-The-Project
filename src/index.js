@@ -11,9 +11,10 @@ import Categories from './components/Categories/Categories';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <Provider store= {store} >
-    <Router>
-       <App />
-       
-    </Router>
- </Provider>
+    
+      <Router>
+         <App />
+      </Router>
+
+  </Provider>
 );

@@ -7,7 +7,8 @@ import { AllProductsAction } from '../../Store/allProductsReducer';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Categories from '../Categories/Categories';
-import { AllProducts } from '../AllProducts';
+import { Catalog } from '../Catalog';
+
 
 
 function Header() {
@@ -17,19 +18,24 @@ function Header() {
   let dispatch = useDispatch()
 
   //useEffect(() =>{dispatch(productsInStock())},[])
+  useEffect(() => {
+    dispatch(productsInStock())
+ },[])
 
 
   return (
     <div className="header_wrapper">
          <div className='left_side-header'>
             <a href='/'><img className='logo' alt='logo' src={Logo}></img></a>
-           <Link to ='/products'> <button  onClick={() => dispatch( AllProductsAction())} className='cat_but' >Catalogue</button></Link>
+            <Link to ={'/catalog'}>
+               <button  onClick={() => dispatch( Catalog())}  className='cat_but'> Catalogue</button>
+           </Link>
         </div>
         
         <nav className='nav_menu'>     
          <ul className='header_list' >
             <li className=''>
-               <a className='nav_list' href ='/categories'>Categories</a>
+               <p className='nav_list'>Categories</p>
            </li>
            <li>
                <a className='nav_list' href ='#'>Coupon</a>
