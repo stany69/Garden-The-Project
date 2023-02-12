@@ -16,6 +16,7 @@ export const allProductsReducer = (state = defaultState,action) =>{
         case ALL_PRODUCTS :
             return {...state , products: [ ...action.payload]}
 
+
             case ADD_COUNT:
                 return {...state , products:state.products.map( elem =>{
                     if (elem.id == action.payload ){
@@ -23,6 +24,8 @@ export const allProductsReducer = (state = defaultState,action) =>{
                     }
                     return elem
                 })}
+
+
 
             case ADD_PRODUCTS:
                 let newGood = state.products.find(elem => elem.name == action.payload)
@@ -34,6 +37,8 @@ export const allProductsReducer = (state = defaultState,action) =>{
                         }
                         return elem
                     })}
+
+
               } else {
                 return {...state , products : [...state.products,{
                     id:Math.max(...state.products.map(elem => elem.id))+1,
@@ -41,6 +46,7 @@ export const allProductsReducer = (state = defaultState,action) =>{
                     count:1
                 }]}
               }
+              
 
               case REM_PRODUCTS:     
 

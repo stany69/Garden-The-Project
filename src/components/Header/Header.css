@@ -32,6 +32,9 @@
     text-decoration: none;
 
 }
+.link_btn :hover{
+    cursor: pointer;
+}
 .nav_menu{
     width: 36%;
     height: 100%;

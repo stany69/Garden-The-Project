@@ -1,21 +1,21 @@
 
-import { useState,useEffect } from 'react'
-
-import {Link, useParams} from 'react-router-dom'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {Link} from 'react-router-dom'
 import './Categories.css'
-import Header from '../Header/Header'
+import { baseUrl } from '../..';
+import { fetchCategoriesList } from '../../asyncAction/categories';
+
+
 
 function Categories() {
 
-    const [categories,setCategories] = useState([])
-    let {id} = useParams()
-
-useEffect(() =>{
-     let url = 'http://localhost:3333/categories/all'
-      fetch(url)
-       .then( res => res.json())
-       .then( data => setCategories(data))
-},[])
+    const categories = useSelector(store => store.categories.categories)
+    const dispatch = useDispatch()
+    
+    useEffect(() => {
+      dispatch(fetchCategoriesList())
+    }, [])
 
 
 
@@ -38,7 +38,9 @@ useEffect(() =>{
           <section className='categories_sec'>
             <div className='cat_text-div'>
               <h3 className='cat_text'>Categories</h3>
-              <button className='all_cat-button'>All Categories</button>
+              <Link to={'/allCategoriesList'}>
+                 <button className='all_cat-button'>All Categories</button>
+              </Link>
             </div>
 
             <div className='fetch_info'>
