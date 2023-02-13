@@ -21,7 +21,7 @@ export const fetchOneProduct = (id) =>{
     return function(dispatch){
         
 
-          fetch (baseUrl+ `/products/${id}`) 
+          fetch (baseUrl + `/products/${id}`) 
            .then(res => res.json())
            .then(data => dispatch(takeProductsAction(data)))
 

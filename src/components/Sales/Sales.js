@@ -34,7 +34,7 @@ function threeProducts(products){
             
             <div className='sales_content'>
                {newThreeProducts.map(elem =>
-                 <div className='sales_products'>
+                 <div key={elem.id} className='sales_products'>
                   <img className='' width={319} height={276} src={`http://localhost:3333${elem.image}`} alt=''/>
                   <div className='prices_sales'>
                     <p className='discount_price'>{elem.discont_price} €</p>

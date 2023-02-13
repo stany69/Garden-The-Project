@@ -45,10 +45,10 @@ function Categories() {
 
             <div className='fetch_info'>
                  {newCategories.map(elem =>
-                  <div className='all_categ-photos'>
+                  <div key={elem.id} className='all_categ-photos'>
                      
                       <h4 className='cat_title'>{elem.title}</h4>
-                      <img width={318} height = {350} className='all_photos-div' src={`http://localhost:3333${elem.image}`} alt= 'photo'/>
+                      <img width={318} height = {350} className='all_photos-div' src={baseUrl + elem.image} alt= 'photo'/>
                   </div>
                   )}
             </div>

@@ -12,8 +12,8 @@ import Coupon from "../Coupon/Coupon";
 import { AllProductsAction } from "../../Store/allProductsReducer";
 import { allProductsReducer } from "../../Store/allProductsReducer";
 import {productsAsync} from "../../asyncAction/productsAsync"
-import { AllProducts, Catalog } from "./Catalog/Catalog";
-import {GetOneProduct} from "../GetOneProduct"
+import { AllProducts, Catalog } from "../Catalog/Catalog";
+import {GetOneProduct} from "../GetOneProduct/GetOneProduct"
 import { Basket } from "../Basket/Basket";
 import { AllCategoriesList } from "../AllCategoriesList/AllCategoriesList";
 import OneCategory from "../OneCategory.js/OneCategory";
@@ -41,6 +41,7 @@ function App() {
                  <Route path="/catalog" element = {<Catalog/>}/>
                  <Route path="/allCategoriesList" element = {<AllCategoriesList/>}/>
                  <Route path="/allCategoriesList/:id" element = {<OneCategory/>}/>
+                 <Route path="/getOneProduct/:id" element = {<GetOneProduct/>}/>
                  <Route path="*" element = {<NotFound/>}/>
             </Routes>
          <Footer/>

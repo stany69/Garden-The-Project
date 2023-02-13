@@ -6,11 +6,11 @@ const defaultState = {
 
 const TAKE_PRODUCT = 'TAKE_PRODUCT'
 
-export const productReducer = (state = defaultState,action) =>{
+export const oneProductReducer = (state = defaultState,action) =>{
     switch(action.type){
 
         case TAKE_PRODUCT :
-            return {...state , oneProduct: action.payload}
+            return {...state , oneProduct:[... action.payload]}
 
 
         default:

@@ -7,7 +7,7 @@ import { AllProductsAction } from '../../Store/allProductsReducer';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Categories from '../Categories/Categories';
-import { Catalog } from '../App/Catalog/Catalog';
+import { Catalog } from '../Catalog/Catalog';
 
 
 
@@ -28,7 +28,7 @@ function Header() {
          <div className='left_side-header'>
             <a href='/'><img className='logo' alt='logo' src={Logo}></img></a>
             <Link className='link_btn' to ={'/catalog'}>
-               <button  onClick={() => dispatch( Catalog())}  className='cat_but'> Catalogue</button>
+               <button    className='cat_but'> Catalogue</button>
            </Link>
         </div>
         

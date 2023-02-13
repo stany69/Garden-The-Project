@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { baseUrl } from "../.."
 import { fetchCategoriesList, fetchOneCategory } from "../../asyncAction/categories"
-
+import './OneCategory.css'
 
 
 
@@ -20,15 +20,23 @@ useEffect(() =>{
   dispatch(fetchCategoriesList())
 },[])
 
+  console.log(category)
 
- console.log(categories)
      return(
-        <div>
-            <h4>{categories?.title}</h4>
+        <div className="oneCategory_wrapper">
+            <h3 className="oneCategory_head">{categories?.title}</h3>
+            <div className="oneCategory_inputs">
+                
+                
+            </div>
+            <div className="oneCategory_content">
              {category.map( elem =>
-             <div key={elem.id} className='sales_products'>
+             <div key={elem.id} className='sales_products oneCategory_product'>
              <img className='' width={319} height={276} src={baseUrl + elem.image} alt=''/>
-             <div className='prices_sales'>
+             <Link to = '/getOneProduct' >
+             <button className="oneCategory_btn">More Details</button>
+             </Link>
+             <div className='prices_sales oneCategory_prices' >
                <p className='discount_price'>{elem.discont_price} €</p>
                <p className='orig_prices'>{elem.price} €</p>
                <p className='percentage'>{Math.round(((elem.price-elem.discont_price)/(elem.price))*100)} %</p>
@@ -37,6 +45,7 @@ useEffect(() =>{
         
             </div>
              )}
+             </div>
         </div>
      )
 }

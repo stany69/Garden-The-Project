@@ -9,7 +9,7 @@ function Footer() {
     <div className='footer'>
         <div className='footer_wrapper'>
             <div className='left_footer'>
-                <h4 className='contacts'>Contacts</h4>
+                <h3 className='contacts'>Contacts</h3>
                 <p className='tel_num'>+49 999 999 99 99</p>
                 <div className='social_madia'>
                     <div className='tel_div'>
@@ -24,7 +24,7 @@ function Footer() {
 
             </div>
             <div className='right_footer'>
-                <h4 className='address_name'>Address</h4>
+                <h3 className='address_name'>Address</h3>
                 <p className='address'>Römerberg <br></br> 60311 Frankfurt am Main</p>
                 <p className='work'>Working Hours</p>
                 <p className='work_h'>24/7</p>

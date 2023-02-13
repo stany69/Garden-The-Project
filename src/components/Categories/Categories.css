@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-.cat_text,.all_cat-button,.cat_title{
+.all_cat-button{
     font-family: 'Monserrat';
     font-style: normal;
     font-weight: 700;
