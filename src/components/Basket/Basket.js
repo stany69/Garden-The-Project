@@ -1,6 +1,7 @@
 
 
 import {  useSelector } from 'react-redux'
+import { baseUrl } from '../..'
 import './Basket.css'
 
 
@@ -22,7 +23,7 @@ import './Basket.css'
                     <div className='map_wrapper'>
                       {basket.map( elem =>
                         <div className='basket_element'>
-                          <img src={elem.image} className='' alt=''/>
+                          <img src={baseUrl+elem.image} width={150} height={150} className='' alt=''/>
                           <h4>{elem.title}</h4>
                           <p>{elem.price}</p>
                           <p>{elem.discont_price}</p>

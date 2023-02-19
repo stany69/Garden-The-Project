@@ -14,6 +14,7 @@ function OneCategory(){
 
 const category = useSelector( store => store.category.category)
 const categories = useSelector(store => store.categories.categories).find(elem => elem.id == id)
+const basket = useSelector(store => store.basket.basket)
 const dispatch = useDispatch()
 
 useEffect(() =>{
