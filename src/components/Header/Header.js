@@ -3,17 +3,17 @@ import Basket from '../media/basket.png'
 import './Header.css';
 import { productsInStock } from '../../asyncAction/productsAsync';
 import { useDispatch ,useSelector} from 'react-redux';
-import { AllProductsAction } from '../../Store/allProductsReducer';
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Categories from '../Categories/Categories';
-import { Catalog } from '../Catalog/Catalog';
+import { basketReducer } from '../../Store/basketReducer';
+
 
 
 
 function Header() {
 
-    let products =  useSelector(store => store.products.products)
+    const basket = useSelector(store => store.basket.basket)
 
   let dispatch = useDispatch()
 
@@ -46,7 +46,12 @@ function Header() {
            <li>
                <a className='nav_list' href ='#'>Contacts</a>
            </li>
-           <a href='/'><img className='basket_pic' alt='basket_pic' src={Basket}></img></a>
+           <Link to='/basket'>
+            <img className='basket_pic'
+             alt='basket_pic' 
+             src={Basket} />
+             <p className='basket_count'>{`${basket.reduce((sum,value)=>sum+value,0)}`}</p>
+             </Link>
          </ul>
         </nav>
     

@@ -42,13 +42,16 @@ function Categories() {
                  <button className='all_cat-button'>All Categories</button>
               </Link>
             </div>
-
+           
             <div className='fetch_info'>
                  {newCategories.map(elem =>
                   <div key={elem.id} className='all_categ-photos'>
-                     
+                    <Link className='allCategories_link' key = {elem.id} to={`/allCategoriesList/${elem.id}`}>
                       <h4 className='cat_title'>{elem.title}</h4>
-                      <img width={318} height = {350} className='all_photos-div' src={baseUrl + elem.image} alt= 'photo'/>
+                      <div className='all_photos-div' style={{backgroundImage:`url(${baseUrl+elem.image})`}}>
+                      {/* <img width={318} height = {350} className='all_photos-div' src={baseUrl + elem.image} alt= 'photo'/> */}
+                      </div>
+                      </Link>  
                   </div>
                   )}
             </div>

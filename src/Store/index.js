@@ -3,15 +3,17 @@ import thunk from 'redux-thunk'
 import {allProductsReducer} from './allProductsReducer'
 import { categoriesReducer } from './categoriesReducer'
 import { OneCategoryReducer } from './OneCategoryReducer'
-import { oneProductReducer } from './oneProductReducer'
+import { itemReducer } from './itemReducer'
+import { basketReducer } from './basketReducer'
 
 
 const rootReducer = combineReducers({
     
     products: allProductsReducer,
-    oneProduct: oneProductReducer,
+    item: itemReducer,
     categories: categoriesReducer,
-    category: OneCategoryReducer
+    category: OneCategoryReducer,
+    basket:basketReducer
 })
 
 

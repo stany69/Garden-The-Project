@@ -1,6 +1,6 @@
 
 import { AllProductsAction } from "../Store/allProductsReducer"
-import { takeProductsAction } from "../Store/oneProductReducer"
+import { takeItemAction } from "../Store/itemReducer"
 import { AddProductsAction } from "../Store/allProductsReducer"
 import { RemProductsAction } from "../Store/allProductsReducer"
 import { baseUrl } from ".."
@@ -23,7 +23,7 @@ export const fetchOneProduct = (id) =>{
 
           fetch (baseUrl + `/products/${id}`) 
            .then(res => res.json())
-           .then(data => dispatch(takeProductsAction(data)))
+           .then(data => dispatch(takeItemAction(data[0])))
 
     }
 }

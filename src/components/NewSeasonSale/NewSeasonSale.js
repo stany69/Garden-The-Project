@@ -10,7 +10,7 @@ function NewSeasonSale() {
                   <div className='left_side'>
                       <h2> New Season </h2>
                       <h1>Sale</h1>
-                      <button className='all_sales-but'>All Sales</button>
+                      <button  className='all_sales-but'>All Sales</button>
                       <button className='details_but'>Details</button>
                   </div>
                   <div className='right_side'>

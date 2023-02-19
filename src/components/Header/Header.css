@@ -67,3 +67,11 @@ ul li :hover{
     color: #339933;
     
 }
+.basket_count{
+    position: absolute;
+    top: 45px;
+    right: 42px;
+    color: red;
+    font-weight: 800;
+
+}

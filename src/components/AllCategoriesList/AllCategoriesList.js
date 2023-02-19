@@ -31,7 +31,9 @@ import './AllCategoriesList.css'
            
                <Link className='allCategories_link' key = {elem.id} to={`/allCategoriesList/${elem.id}`}>
                  <div className='allCategories_content'>
-                    <img width={318} height={350} src ={baseUrl + elem.image}/>
+                   <div className='all_photos-div' style={{backgroundImage:`url(${baseUrl+elem.image})`}}>
+                      {/* <img width={318} height={350} src ={baseUrl + elem.image} className= 'all_photos-div' alt='all_photos'/> */}
+                    </div>
                     <h4 className='allCategories_titles'>{elem.title}</h4>
                  </div>
               </Link>

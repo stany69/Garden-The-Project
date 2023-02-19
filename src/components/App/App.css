@@ -1,4 +1,21 @@
 
+:root{
+ --green: #339933;
+ --black:#000000;
+ --darkGreen:#006300;
+ --blueSky:#A1E2EB;
+ --almostWhite:#E5E5E5;
+ --darkPink:#FF32A1;
+ --gray:#8b8b8b;
+ --white:#FFFFFF;
+ --coupons:linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+ --lightBlack:#3a3a3a;
+ --spanGray:#C0C0C0;
+
+}
+
+
+
 *{margin: 0; padding: 0;box-sizing: border-box;}
 
 
@@ -14,6 +31,7 @@ h3{
   font-size: 40px;
   line-height: 130%;
   color: #000000;
+ 
 }
 h4{
     font-family: 'Monserrat';

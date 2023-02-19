@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
 import {Link, useParams} from 'react-router-dom'
+import { addItemAction } from '../../Store/basketReducer'
 
 import './Sales.css'
 
@@ -9,7 +10,8 @@ import './Sales.css'
 function Sales() {
 
     const [products,setProducts] = useState([])
-    let {id} = useParams()
+    
+    
 
 useEffect(() =>{
      let url = 'http://localhost:3333/products/all'
@@ -34,8 +36,10 @@ function threeProducts(products){
             
             <div className='sales_content'>
                {newThreeProducts.map(elem =>
+               <Link to = {'/item/'+elem.id} className = 'sales_link' >
                  <div key={elem.id} className='sales_products'>
-                  <img className='' width={319} height={276} src={`http://localhost:3333${elem.image}`} alt=''/>
+                 
+                  <img className='sales_img' width={319} height={300} src={`http://localhost:3333${elem.image}`} alt=''/>
                   <div className='prices_sales'>
                     <p className='discount_price'>{elem.discont_price} €</p>
                     <p className='orig_prices'>{elem.price} €</p>
@@ -44,7 +48,7 @@ function threeProducts(products){
                   <h4 className='product_title'>{elem.title}</h4>
              
                  </div>
-              
+                 </Link>
                )}
           
           
