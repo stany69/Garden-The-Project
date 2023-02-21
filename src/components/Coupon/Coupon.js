@@ -3,6 +3,9 @@ import './Coupon.css'
 import Gnome from '../media/gnome.png'
 
 function Coupon() {
+
+  
+
     return (
       <div className='coupon_wraapper'>
         <div className='coupon_left'>

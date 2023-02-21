@@ -6,7 +6,7 @@ import { useDispatch ,useSelector} from 'react-redux';
 
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { basketReducer } from '../../Store/basketReducer';
+
 
 
 
@@ -41,7 +41,7 @@ function Header() {
                <a className='nav_list' href ='#'>Coupon</a>
            </li>
            <li>
-               <a className='nav_list'  href ='#'>Sales</a>
+               <a className='nav_list'  href ={window.scrollTo(0,5000)}>Sales</a>
            </li>
            <li>
                <a className='nav_list' href ='#'>Contacts</a>
@@ -50,7 +50,7 @@ function Header() {
             <img className='basket_pic'
              alt='basket_pic' 
              src={Basket} />
-             <p className='basket_count'>{`${basket.reduce((sum,value)=>sum+value,0)}`}</p>
+             <p className='basket_count'>{`${basket.reduce((sum,value)=>sum+value.count,0)}`}</p>
              </Link>
          </ul>
         </nav>

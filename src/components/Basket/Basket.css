@@ -7,11 +7,158 @@
     width: 100%;
     height: auto;
 }
-.map_wrapper{
-    width: 100%;
-    height: auto;
+.basket_head{
+    margin-left: 2em;
+    margin-top: 1em;
 }
-.basket_element{
+.basket_options{
+   width: 54%;
+   display: flex; 
+   justify-content: space-between;
+    align-items: center;
+    margin-left: 5em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.first_option{
+    display: flex;
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.back_toStore{
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arrow{
+    width: 6px;
+    height: 12px;
+}
+
+
+
+.basket_container{
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.map_basket-wrapper{
+    width: 60%;
     height: auto;
+    border-top: 1px solid gray;
+   
+   
+}
+
+
+.basket_element{
+    width: 96%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid gray;
+    margin: 1em;
+    
+}
+
+.basket_img{
+    border-radius: 10px;
+}
+
+.basket_title{
+    width: 280px;
+    margin-left: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.basket_prices{
+    width: 282px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order_details-block{
+    width: 470px;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.order{
+    font-size: 28px;
+    margin-left: 2em;
+}
+.total_sum{
+    display: flex;
+    justify-content: space-around;
+}
+
+.total_text{
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: #000000; 
+    letter-spacing: .03em;
+}
+
+.sum_total{
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #000000;
+    letter-spacing: .03em;
+}
+
+.order_div{
+    display: flex;
+    flex-direction: column;
+}
+.tel_basket{
+    border: 1px solid var(--black);
+    width: 440px;
+    height: 73px;
+    border-radius: 20px;
+    margin-left: .7em;
+    background-color: var(--white);
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: .03em;
+    text-align: center;
+
+}
+
+.submit_basket{
+   
+    width: 446px;
+    height: 76px;
+    border-radius: 17px;
+    margin-left: .3em;
+    background-color: var(--green);
+}
+.backToStore_link{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
 }

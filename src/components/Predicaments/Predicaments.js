@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {Link} from 'react-router-dom'
-import './Categories.css'
+import './Predicaments.css'
 import { baseUrl } from '../..';
 import { fetchCategoriesList } from '../../asyncAction/categories';
 

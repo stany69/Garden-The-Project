@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import NewSeasonSale from "../NewSeasonSale/NewSeasonSale";
 import Sales from "../Sales/Sales";
-import Categories from "../Categories/Categories";
+import Predicaments from "../Predicaments/Predicaments";
 import Coupon from "../Coupon/Coupon";
 
 
@@ -32,7 +32,7 @@ function App() {
              <Routes>
                  <Route path="/" element = {<div className="central_wrapper">
                                              <NewSeasonSale />
-                                             <Categories/>
+                                             <Predicaments/>
                                              <Coupon/>
                                              <Sales/>
                                             </div>}/>
