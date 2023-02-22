@@ -1,17 +1,22 @@
 
 import Arrow from '../media/arrow.png'
-import {  useSelector } from 'react-redux'
+import {  useDispatch, useSelector } from 'react-redux'
 import { baseUrl } from '../..'
 import './Basket.css'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import { AddCountAction, AddProductsAction, RemProductsAction } from '../../Store/allProductsReducer'
+import { AddCountBasketAction, addItemAction, AddProductsBasketAction, RemBasketProductsAction } from '../../Store/basketReducer'
 
 
 
 
  function Basket(){
     let {id} = useParams()
+    let dispatch = useDispatch()
     const basket = useSelector(store => store.basket.basket)
+    
+    console.log(basket)
 
     
 
@@ -26,7 +31,7 @@ import { Link } from 'react-router-dom';
                             <p>Home</p>
                           </Link>
                           <p>/</p>
-                          <Link to={'/categories'} className ='nav_list'>
+                          <Link to={'/allCategoriesList'} className ='nav_list'>
                             <p>Categories</p>
                           </Link>
                         </div>
@@ -48,7 +53,11 @@ import { Link } from 'react-router-dom';
                             </div>
                             <div className='basket_title'>
                                 <h4>{elem.title}</h4>
-                                <input></input>
+                                 <div className='item_counter'>
+                                    <button onClick={()=>dispatch(RemBasketProductsAction(elem.id))} className='plus_minus'>-</button>
+                                    <p>{elem.count}</p>
+                                    <button onClick={()=>dispatch(AddCountBasketAction(elem.id))} className='plus_minus'>+</button>
+                                 </div>   
                             </div>
                             <div className='basket_prices'>
                                 <p className='discount_price'>{elem.discont_price} €</p>
@@ -66,9 +75,10 @@ import { Link } from 'react-router-dom';
                                 <p className='sum_total'>{`${basket.reduce((sum,value)=>sum+value.discont_price,0)}`} €</p>
                             </div>
                             <div className='order_div'>
-                            <input className='number tel_basket' type='tel' placeholder ='your phone number'/>
-                            <input className='submit submit_basket' type="submit" value = "Order Now"/>
-                                
+                                <form>
+                                    <input className='number tel_basket' type='tel' placeholder ='your phone number'/>
+                                    <input className='submit submit_basket' type="submit" value = "Order Now"/>
+                                </form>
                             </div>
                          </div>
                     </div>

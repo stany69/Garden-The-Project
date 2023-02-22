@@ -28,15 +28,15 @@ export function Catalog(){
     
 
     function setMinMaxPrice(e){
-      console.log(formRef, e.target)
-      if (e.code == 'Enter'){
-          console.log('etst')
+      
+      
+          
           let data = new FormData(formRef.current)
           data = Object.fromEntries(data)
-          data.max_price = (!data.max_price) ? Infinity : data.max_price
-          data.min_price = (!data.min_price) ? -Infinity : data.min_price
+          data.max_price = (data.max_price) ? +data.max_price : Infinity 
+          data.min_price = (data.min_price) ? +data.min_price :-Infinity
           dispatch(filterProductsPriceAction(data))
-      }
+      
   }
 
 
@@ -47,10 +47,10 @@ export function Catalog(){
          <div className="oneCategory_inputs">
                 <div className="form_cat">
                     <div className="price_div">
-                     <form className="price_form" ref={formRef} onKeyDown={(e) => setMinMaxPrice(e)}>
+                     <form className="price_form" ref={formRef} onChange={(e) => setMinMaxPrice(e)}>
                            <label className="price_label inputs_text">Price</label>
-                           <input className="price_felds" name='min_price' type='number' placeholder = 'from'></input>
-                           <input className="price_felds" name="max_price" type='number' placeholder = 'to'></input>
+                           <input className="price_felds" name='min_price' type={'number'} placeholder = 'from'></input>
+                           <input className="price_felds" name="max_price" type={'number'} placeholder = 'to'></input>
                      </form>
                      </div>
                      <div className="salesOnly_div">
@@ -78,9 +78,9 @@ export function Catalog(){
                     
                       <img  className='all_photos-div catalog_photo' src={baseUrl + elem.image} alt= 'photo'/>
                       <div className='oneCategory_prices' >
-                          <p className='discount_price'>{elem.discont_price} €</p>
-                          <p className='orig_prices'>{elem.price} €</p>
-                          <p className='percentage'>{Math.round(((elem.price-elem.discont_price)/(elem.price))*100)} %</p>
+                          <p  className='discount_price'>{elem.discont_price} €</p>
+                         {(elem.price - elem.discont_price != 0) && <p style={{color:'gray'}} className='orig_prices'>{elem.price} €</p>}
+                         {(elem.price - elem.discont_price != 0) && <p style={{color:'red'}} className='percentage'>{Math.round(((elem.price-elem.discont_price)/(elem.price))*100)} %</p>}
                       </div>
                       {(elem.price - elem.discont_price != 0) && <p style={{color:'red'}}>SALE!!!</p>}
                       <h4 className='cat_title'>{elem.title}</h4>

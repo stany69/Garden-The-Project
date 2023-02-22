@@ -25,7 +25,7 @@ export const allProductsReducer = (state = defaultState,action) =>{
                        elem.count = elem.count + 1
                     }
                     return elem
-                })}
+                }),count:1}
 
 
 
@@ -95,9 +95,9 @@ export const allProductsReducer = (state = defaultState,action) =>{
              }
 
              case FILTER_PRODUCTS_PRICE:
-            console.log(action)
+             state.products = state.products.map(elem =>({...elem , show:true}))
             return {...state, products: state.products.map(elem => {
-                if (elem.discont_price < action.payload.min_price || elem.discont_price > action.payload.max_price){
+                if (!(elem.discont_price >= action.payload.min_price&& elem.discont_price <= action.payload.max_price)){
                     elem.show = false
                 }
                 return elem

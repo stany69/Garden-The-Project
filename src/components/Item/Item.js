@@ -37,12 +37,13 @@ export function Item(){
                         
                         <div className="descr_container">
                           <div className="prices">
+                            
                               <p className='discount_price item_d-price'>{oneProduct?.discont_price} €</p>
                               <p className='orig_prices item_or-price'>{oneProduct?.price} €</p>
                               <p className='percentage item_percentage'>{Math.round(((oneProduct?.price-oneProduct?.discont_price)/(oneProduct?.price))*100)} %</p>
                            </div>
 
-                           <button className="item_btn" onClick={() => dispatch(addItemAction())}>Add to Basket</button>
+                           <button className="item_btn" onClick={() => dispatch(addItemAction(oneProduct))}>Add to Basket</button>
                            <span className="item_span"></span>
                            <p className="item_descr">{oneProduct.description}</p>
                         </div>

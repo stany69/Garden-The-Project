@@ -1,8 +1,6 @@
 
 import { AllProductsAction } from "../Store/allProductsReducer"
 import { takeItemAction } from "../Store/itemReducer"
-import { AddProductsAction } from "../Store/allProductsReducer"
-import { RemProductsAction } from "../Store/allProductsReducer"
 import { baseUrl } from ".."
 
 
