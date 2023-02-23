@@ -8,6 +8,8 @@
 }
 .allCategories_head{
     letter-spacing: .03em;
+    width: 400px;
+    text-align:center;
 }
 .allCategories_div{
     display: grid;
@@ -27,6 +29,7 @@
 .allCategories_titles{
     margin-bottom: 2em;
     margin-top: -2em;
+    
 }
 
 .allCategories_link{

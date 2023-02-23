@@ -37,13 +37,14 @@ export const basketReducer = (state = defaultState, action) =>{
                    return elem
                }) }
            }
+
            case ADD_PRODUCTSBASKET:
-            let newGood = state.basket.find(elem => elem.name == action.payload)
+            let newGood = state.basket.find(elem => elem.id == action.payload)
 
               if(newGood){
                 return{...state,basket: state.basket.map(elem=>{
                     if(elem.id == newGood.id){
-                        elem.count = elem.count+1
+                        elem.count = elem.count +1
                     }
                     return elem
                 })}
@@ -52,7 +53,7 @@ export const basketReducer = (state = defaultState, action) =>{
           } else {
             return {...state , basket : [...state.basket,{
                 id:Math.max(...state.basket.map(elem => elem.id))+1,
-                name:action.payload,
+                id:action.payload,
                 count:1
             }]}
           }
@@ -67,5 +68,5 @@ export const basketReducer = (state = defaultState, action) =>{
 
 export const addItemAction = (payload) => ({type: ADD_ITEM, payload})
 export const AddCountBasketAction = (payload) => ({type: ADD_COUNTBASKET, payload})
-export const RemBasketProductsAction = (payload) => ({type: ADD_COUNTBASKET, payload})
+export const RemBasketProductsAction = (payload) => ({type: REM_BASKETPRODUCTS, payload})
 export const AddProductsBasketAction = (payload) => ({type: ADD_PRODUCTSBASKET,payload})

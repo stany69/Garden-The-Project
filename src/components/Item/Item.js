@@ -2,7 +2,7 @@
 import { useSelector,useDispatch } from "react-redux";
 
 import { fetchOneProduct } from "../../asyncAction/productsAsync";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { baseUrl } from '../..';
 import './Item.css'

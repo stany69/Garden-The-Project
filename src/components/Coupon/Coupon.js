@@ -7,7 +7,7 @@ function Coupon() {
   
 
     return (
-      <div className='coupon_wraapper'>
+      <div className='coupon_wraapper' id='coupon'>
         <div className='coupon_left'>
             <img className='gnome' src={Gnome} alt='gnome'/>
 

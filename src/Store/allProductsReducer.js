@@ -30,7 +30,7 @@ export const allProductsReducer = (state = defaultState,action) =>{
 
 
             case ADD_PRODUCTS:
-                let newGood = state.products.find(elem => elem.name == action.payload)
+                let newGood = state.products.find(elem => elem.id == action.payload)
     
                   if(newGood){
                     return{...state,products: state.products.map(elem=>{
@@ -44,7 +44,7 @@ export const allProductsReducer = (state = defaultState,action) =>{
               } else {
                 return {...state , products : [...state.products,{
                     id:Math.max(...state.products.map(elem => elem.id))+1,
-                    name:action.payload,
+                    id:action.payload,
                     count:1
                 }]}
               }

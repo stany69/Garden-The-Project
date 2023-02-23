@@ -35,16 +35,16 @@ function Header() {
         <nav className='nav_menu'>     
          <ul className='header_list' >
             <li className=''>
-               <p className='nav_list'>Categories</p>
+               <a className='nav_list' href='/#categories'>Categories</a>
            </li>
            <li>
-               <a className='nav_list' href ='#'>Coupon</a>
+               <a className='nav_list' href ='/#coupon'>Coupon</a>
            </li>
            <li>
-               <a className='nav_list'  href ={window.scrollTo(0,5000)}>Sales</a>
+               <a className='nav_list'  href = '/#sales'>Sales</a>
            </li>
            <li>
-               <a className='nav_list' href ='#'>Contacts</a>
+               <a className='nav_list' href ='/#contacts'>Contacts</a>
            </li>
            <Link to='/basket'>
             <img className='basket_pic'

@@ -5,8 +5,8 @@ import { baseUrl } from '../..'
 import './Basket.css'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import { AddCountAction, AddProductsAction, RemProductsAction } from '../../Store/allProductsReducer'
-import { AddCountBasketAction, addItemAction, AddProductsBasketAction, RemBasketProductsAction } from '../../Store/basketReducer'
+import {  AddCountBasketAction,  RemBasketProductsAction } from '../../Store/basketReducer'
+
 
 
 
@@ -15,9 +15,11 @@ import { AddCountBasketAction, addItemAction, AddProductsBasketAction, RemBasket
     let {id} = useParams()
     let dispatch = useDispatch()
     const basket = useSelector(store => store.basket.basket)
-    
-    console.log(basket)
 
+    
+    
+    
+    let total = (`${basket.reduce((sum,value)=>(sum+value.discont_price*value.count),0)}`)
     
 
       return(
@@ -60,7 +62,7 @@ import { AddCountBasketAction, addItemAction, AddProductsBasketAction, RemBasket
                                  </div>   
                             </div>
                             <div className='basket_prices'>
-                                <p className='discount_price'>{elem.discont_price} €</p>
+                                <p className='discount_price'>{elem.discont_price*elem.count} €</p>
                                 <p className='orig_prices'>{elem.price} €</p>
                             </div>
                             
@@ -72,7 +74,9 @@ import { AddCountBasketAction, addItemAction, AddProductsBasketAction, RemBasket
                             <h4 className='order'>Order Details</h4>
                             <div className='total_sum'>
                                 <h6 className='total_text'>Total:</h6>
-                                <p className='sum_total'>{`${basket.reduce((sum,value)=>sum+value.discont_price,0)}`} €</p>
+                                
+                                <p className='sum_total'>{total} €</p>
+                                
                             </div>
                             <div className='order_div'>
                                 <form>
@@ -88,3 +92,5 @@ import { AddCountBasketAction, addItemAction, AddProductsBasketAction, RemBasket
 }
 
 export default Basket
+
+// `${basket.reduce((sum,value)=>(sum+value.discont_price),0)}`

@@ -33,7 +33,7 @@ function Categories() {
 
 
     return (
-      <div className='categories_wrapper'>
+      <div className='categories_wrapper' id='categories'>
       
           <section className='categories_sec'>
             <div className='cat_text-div'>

@@ -23,6 +23,7 @@
 html,body{
     width: 100%;
     height: auto;
+    /* overflow-x: hidden; */
 }
 h3{
     font-family: 'Monserrat';
@@ -42,3 +43,5 @@ h4{
     color: #000000;
     letter-spacing: .03em;
 }
+
+*{scroll-behavior: smooth;}

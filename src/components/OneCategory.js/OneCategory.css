@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 850px;
+  height: 1500px;
 }
 
 
@@ -13,7 +13,7 @@
     width: 100%;
     height: 650px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     grid-gap: 25px;
 }
 
@@ -64,7 +64,7 @@
 .btn_item{
     display: block;
     position: absolute;
-    margin-top: 195px;
+    margin-top: 105px;
     opacity: 0.9;
    
 

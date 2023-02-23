@@ -6,7 +6,7 @@ import whatsapp from '../media/whatsapp.png'
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div className='footer' id='contacts'>
         <div className='footer_wrapper'>
             <div className='left_footer'>
                 <h3 className='contacts'>Contacts</h3>

@@ -32,7 +32,7 @@
 }
 
 .all_categ-photos{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column-reverse;
     margin: 1.25em;
@@ -68,8 +68,8 @@
     text-align: center;
 }
 .all_photos-div{
-    width: 318px;
-    height: 300px;
+    width: 300px;
+    height: 280px;
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 20px;
