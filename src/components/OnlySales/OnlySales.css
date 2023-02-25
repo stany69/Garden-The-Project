@@ -1,6 +1,8 @@
 
 .onlySales_wrapper{
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,23.3%);
+    width: 100%;
+    height: auto;
 }
 .all_sales-head{
     margin: 1em;
@@ -24,4 +26,8 @@
     align-items: center;
     justify-content: space-around;
     width: 250px;
+}
+
+.onlySales_btn{
+    margin-top: -25px;
 }

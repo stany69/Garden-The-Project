@@ -33,3 +33,26 @@
     border: solid 1px rgb(214, 209, 209);
     
 }
+
+.catalog_btn{
+    margin-top: 100px;
+}
+
+@media(max-width:1150px){
+    .allProducts-wrapper{
+        height: 10300px;
+    }
+    .catalog_info{
+        height: 10000px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 8em;
+
+    }
+    .catalog_grid{
+        width: 300px;
+        margin-left: 2em;
+    }
+    .catalog_text{
+        width: 300px;
+    }
+}

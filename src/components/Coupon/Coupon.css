@@ -61,3 +61,10 @@ form{
     display: flex;
     flex-direction: column;
 }
+
+
+@media(max-width:1150px){
+    .coupon_wraapper{
+        height: 800px;
+    }
+}

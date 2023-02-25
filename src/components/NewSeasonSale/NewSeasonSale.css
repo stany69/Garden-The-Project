@@ -15,25 +15,8 @@
     width: 58%;
     height: 100%;
 }
-h2 ,h1 {
-    font-family: 'Monserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 63px;
-    line-height: 130%;
-    color: #ffffff;
-    width: 50%;
-    
-}
-h2{
-    margin-left: 3em;
-    margin-top: 2em;
-}
-h1{
-    font-size: 80px;
-    margin-top: -0.1em;
-    margin-left: 3.5em;
-}
+
+
 .all_sales-but , .details_but{
     width: 241px;
     height: 82px;
@@ -64,4 +47,30 @@ h1{
 
    width: 100%; 
     
+}
+
+@media(max-width:1150px){
+    .ns_sale-content{
+        height: 800px;
+    }
+    .left_side{
+        display: flex;
+        flex-direction: column;
+    }
+    .newSeason{
+        width: 500px;
+        text-align: end;
+    }
+    .sale_sale{
+        width: 500px;
+    text-align: center;
+    }
+    .all_sales-but{
+        margin-left: 17em;
+    margin-top: 5em;
+    }
+    .details_but{
+        margin-left: 17em;
+        margin-top: 5em;
+    }
 }

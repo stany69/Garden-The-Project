@@ -47,28 +47,47 @@
 .social_madia{
     display: flex;
     margin-top: 1.5em;
-    margin-left: .2em;
+    margin-left: -3.8em;
 }
 .address{
     margin-left: 2em; 
    font-weight: 600;
 }
 .telegram{
-    width: 65px;
-    height: 65px;
+    width: 44px;
+    height: 44px;
     margin-left: 5em;
     
 }
-.tel_text{
-    margin-left: 5em;
+.tel_text {
+    margin-left: 4.4em;
     width: 7%;
 }
+.whats_div{
+    width: 150px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -3em;
+}
 .whatsapp{
+    width: 46px;
+    height: 46px;
     margin-left: 7em;
 }
 .whats_text{
     margin-left: 7em;
 }
+.whats_text.tel_text{
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 130%;
+    color: #000000;
+}
+
 .right_footer{
   width: 40%;
   height: 100%;
@@ -94,5 +113,23 @@
     margin-top: 6em;
     margin-left: -16em;
     color: darkgray;
+}
+
+@media(max-width:1150px){
+    .footer{
+        height: 500px;
+    }
+    .footer_wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .right_footer{
+      margin-left: 25em;
+      margin-bottom: 10em;
+    }
+    .left_footer{
+        margin-top: 38em;
+        margin-left: 2em;
+    }
 }
 

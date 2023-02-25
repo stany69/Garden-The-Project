@@ -31,9 +31,12 @@
     align-items: center;
     justify-content: space-around;
    
-
-    
 }
+.sales_link{
+    text-decoration: none;
+   
+}
+
 
 .prices_sales{
     display: flex;
@@ -78,9 +81,30 @@
     color: #3a3a3a;
 }
 
-.sales_link{
-    text-decoration: none;
-}
+
 .sales_img{
     border-radius:20px ;
+}
+
+
+@media(max-width:1150px){
+    .sales_wrapper{
+        height: 1400px;
+
+    }
+    .sales_content{
+        flex-direction: column;
+        margin-left: 5em;
+    }
+    .sales_link{
+        width: 600px;
+    }
+
+  .sales_head{
+    margin-left: 3em;
+
+  }
+  .sales_img{
+    width: 400px;
+  }
 }

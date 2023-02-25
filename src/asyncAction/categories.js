@@ -1,6 +1,7 @@
 import { baseUrl } from ".."
+import { AllProductsAction, FilterProductsAction } from "../Store/allProductsReducer"
 import { getCategoriesAction } from "../Store/categoriesReducer"
-import { getOneCategoryAction } from "../Store/OneCategoryReducer"
+import { FilterCategoryAction, filterCategoryPriceAction, getOneCategoryAction } from "../Store/OneCategoryReducer"
 
 
 export const fetchCategoriesList = () =>{
@@ -17,5 +18,20 @@ export const fetchOneCategory = (id) =>{
         fetch(baseUrl + `/categories/${id}`)
            .then(res => res.json())
            .then(data => dispatch(getOneCategoryAction(data)))
+    }
+}
+
+export const fetchAllSalesCategoryList = (id) =>{
+    return function(dispatch){
+        let url = (baseUrl + `/categories/${id}`)
+
+          fetch (url) 
+           .then(res => res.json())
+           .then(data =>{
+             dispatch(getOneCategoryAction(data))
+             dispatch(FilterCategoryAction(true))
+             dispatch(filterCategoryPriceAction(data))
+           })
+
     }
 }

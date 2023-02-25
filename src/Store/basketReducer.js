@@ -1,7 +1,7 @@
 
 
 const defaultState = {
-    basket:[]
+    basket:JSON.parse(localStorage.getItem('basket')) ?? []
 }
 
 
@@ -39,24 +39,17 @@ export const basketReducer = (state = defaultState, action) =>{
            }
 
            case ADD_PRODUCTSBASKET:
-            let newGood = state.basket.find(elem => elem.id == action.payload)
 
-              if(newGood){
-                return{...state,basket: state.basket.map(elem=>{
-                    if(elem.id == newGood.id){
-                        elem.count = elem.count +1
+            let new_entries = state.basket.find(elem => elem.id == action.payload.id)
+            if (new_entries) {             
+                return {...state, basket: state.basket.map(elem => {
+                    if (elem.id == new_entries.id){
+                        elem.count = elem.count + 1
                     }
                     return elem
                 })}
-
-
-          } else {
-            return {...state , basket : [...state.basket,{
-                id:Math.max(...state.basket.map(elem => elem.id))+1,
-                id:action.payload,
-                count:1
-            }]}
-          }
+            } else {
+                return {...state, basket: [...state.basket, {...action.payload, count: 1}]}}
 
 
         default:

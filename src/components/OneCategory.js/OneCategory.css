@@ -4,17 +4,22 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 1500px;
+  height: 1100px;
 }
 
 
 
 .oneCategory_content{
     width: 100%;
-    height: 650px;
+    height: 750px;
+   
+    
+}
+.oneCat_underMap{
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-gap: 25px;
+    margin-left: -1;
+    grid-template-columns: repeat(4,23.5%) ;
 }
 
 .oneCategory_product{
@@ -50,7 +55,9 @@
 }
 
 
-
+.personal_set{
+    margin-top: -17px;
+}
 
 
 .oneCategory_prices{
@@ -147,4 +154,35 @@
     align-items: center;
     justify-content: space-around;
     width: 300px;
+}
+.product_title{
+    width: 300px;
+}
+
+@media(max-width:1150px){
+
+    .oneCategory_wrapper{
+        height: 2000px;
+    }
+    .oneCategory_head{
+        margin-left: 2em;
+    }
+    .oneCategory_inputs{
+     width: 100%;
+    }
+    .form_cat{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        height: 200px;
+        margin-left: 5em;
+    }
+    .oneCategory_content{
+        height: 100%;
+        margin-top: 8em;
+    }
+    .oneCat_underMap{
+        grid-template-columns: 1fr 1fr;
+    }
 }

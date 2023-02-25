@@ -1,33 +1,22 @@
-import { useState,useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
-import {Link, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { fetchAllSalesProductsList } from '../../asyncAction/productsAsync'
-import { addItemAction } from '../../Store/basketReducer'
-
 import './Sales.css'
 
 
 function Sales() {
 
-//     const [products,setProducts] = useState([])
-    
-    
 
-// useEffect(() =>{
-//      let url = 'http://localhost:3333/products/all'
-//       fetch(url)
-//        .then( res => res.json())
-//        .then( data => setProducts(data))
-// },[])
+
+
+
 const products =  useSelector(store => store.products.products).filter(elem => {
     if(elem.price>elem.discont_price){
         return elem
-        
-
-        
-    }
+        }
 })
+
 
 const dispatch = useDispatch()
     
@@ -35,11 +24,13 @@ const dispatch = useDispatch()
       dispatch(fetchAllSalesProductsList())
     }, [])
 
+
    
 function threeProducts(products){
 
     return products.slice(0,3)
  }
+
 
  let newThreeProducts = threeProducts(products)
 
